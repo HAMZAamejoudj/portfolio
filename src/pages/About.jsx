@@ -94,18 +94,18 @@ const About = () => {
     {
       period: "2024 - Present",
       degree: "Excellence Bachelor's in Information Systems and Artificial Intelligence",
-      institution: "Multidisciplinary Faculty of Khouribga",
+      institution: "Polydisciplinary Faculty of Khouribga - Sultan Moulay Slimane University",
       description: "Advanced studies in information systems and artificial intelligence.",
     },
     {
       period: "2022 - 2024",
-      degree: "Advanced Technician Diploma in Multimedia and Web Design",
-      institution: "Preparatory Class for Advanced Technician Certificate, Errachidia",
+      degree: "Higher Technician in Multimedia and Web Development.",
+      institution: "Preparatory Class for Higher Technician, Errachidia",
       description: "Specialized in multimedia, web development, and UI/UX design.",
     },
     {
       period: "2020 - 2022",
-      degree: "High School Diploma in IT Maintenance and Networks",
+      degree: "Baccalaureate in IT Maintenance and Networks",
       institution: "Hassan II High School, Midelt",
       description: "Focused on computer maintenance, networking, and troubleshooting.",
     },
