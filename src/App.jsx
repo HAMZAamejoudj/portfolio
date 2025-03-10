@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Loading from './components/Loading';
-import './app.css';
+import './App.css';
 import { NavbarContext } from './pages/Projects'; // Import context from Projects
 
 const Navbar = lazy(() => import('./pages/Navbar'));
