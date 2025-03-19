@@ -126,9 +126,10 @@ const ServicesSection = () => {
   const handleCloseModal = () => {
     setModalOpen(false);
   };
+  
 
   return (
-    <section id='service' className="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
+    <section id='services' className="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2 
@@ -136,7 +137,7 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+            className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-4"
           >
             My Services
           </motion.h2>
@@ -145,7 +146,7 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto"
+            className="mt-4 text-lg text-white max-w-2xl mx-auto"
           >
             Professional development services tailored to your project needs
           </motion.p>
@@ -164,7 +165,7 @@ const ServicesSection = () => {
       
       {selectedService && (
         <Dialog open={modalOpen} onOpenChange={handleCloseModal}>
-          <DialogContent className="bg-gradient-to-b from-gray-900 to-black border border-blue-500/20 text-white max-w-2xl">
+          <DialogContent className="bg-gradient-to-b from-gray-900 to-black border border-blue-500/20 text-white max-w-4xl">
             <DialogHeader>
               <div className={`p-4 -mt-6 -mx-6 mb-4 bg-gradient-to-r ${selectedService.color} rounded-t-lg`}>
                 <div className="flex items-center space-x-4">
@@ -210,13 +211,6 @@ const ServicesSection = () => {
               </div>
             </div>
             
-            <DialogFooter>
-              <Button 
-                className={`w-full bg-gradient-to-r ${selectedService.color} hover:opacity-90 transition-opacity`}
-              >
-                Request This Service
-              </Button>
-            </DialogFooter>
           </DialogContent>
         </Dialog>
       )}

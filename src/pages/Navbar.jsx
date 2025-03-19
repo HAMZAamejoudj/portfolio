@@ -9,9 +9,10 @@ const Navbar = () => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
+    { id: 'services', label: 'Services' },
     { id: 'projects', label: 'Projects' },
     { id: 'testimonials', label: 'Testimonials' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Hire Me' }
   ];
   
   // Handle smooth scrolling when clicking on nav items

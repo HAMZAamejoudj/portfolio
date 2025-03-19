@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiArrowUp } from 'react-icons/fi';
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiArrowUp, FiInstagram } from 'react-icons/fi';
 
 const Footer = () => {
   // Function to scroll to top
@@ -11,19 +11,22 @@ const Footer = () => {
     });
   };
 
+  // Function for smooth scrolling to sections without changing URL
+  const scrollToSection = (sectionId) => (event) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Get current year for copyright
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-20 overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 to-black pointer-events-none"></div>
-      
-      {/* Divider with glowing effect */}
-      <div className="relative">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-blue-500 blur-sm"></div>
-      </div>
+    <footer className="relative mt-16 bg-gradient-to-b from-blue-900 to-blue-950 text-white">
+      {/* Decorative top border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
       
       {/* Scroll to top button */}
       <div className="relative z-10 flex justify-center -mt-6">
@@ -31,128 +34,111 @@ const Footer = () => {
           onClick={scrollToTop}
           whileHover={{ y: -3 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-full shadow-lg shadow-blue-600/20"
+          className="bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-full shadow-lg shadow-blue-600/30"
         >
           <FiArrowUp className="text-white text-xl" />
         </motion.button>
       </div>
       
       <div className="container mx-auto px-6 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* About Section */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-              Karim Dev
-            </h3>
-            <p className="text-gray-400">
-              Full stack developer passionate about creating beautiful, functional, and performant web experiences.
-            </p>
+        <div className="flex flex-col md:flex-row justify-between gap-10">
+          {/* Logo & About */}
+          <div className="md:w-1/3 flex flex-col items-center">
+            <div className="">
+              <img onClick={scrollToTop} src="/logo_white.svg" alt="Karim Dev Logo" className="h-32 hover:cursor-pointer hover:scale-105 duration-200 transition-all" />
+            </div>
+
             
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-5">
               <motion.a 
-                href="https://github.com/karim" 
+                href="https://github.com/Jhonwal" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, color: '#4FD1C5' }}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-cyan-300 transition-colors"
               >
                 <FiGithub size={20} />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com/in/karim" 
+                href="https://www.linkedin.com/in/karim-ouiaboub-136178283/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, color: '#4FD1C5' }}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-cyan-300 transition-colors"
               >
                 <FiLinkedin size={20} />
               </motion.a>
               <motion.a 
-                href="https://twitter.com/karim" 
+                href="https://www.instagram.com/wag.uer/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, color: '#4FD1C5' }}
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <FiTwitter size={20} />
-              </motion.a>
-              <motion.a 
-                href="https://instagram.com/karim" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                whileHover={{ y: -3, color: '#4FD1C5' }}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-cyan-300 transition-colors"
               >
                 <FiInstagram size={20} />
               </motion.a>
             </div>
           </div>
           
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-blue-400">Quick Links</h3>
-            <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((link) => (
-                <li key={link}>
-                  <motion.a 
-                    href={`#${link.toLowerCase()}`}
-                    whileHover={{ x: 5 }}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-xs text-blue-500">▹</span> {link}
-                  </motion.a>
-                </li>
+          {/* Middle Column with Quick Links */}
+          <div className="md:w-1/3">
+            <h3 className="text-lg font-semibold text-cyan-300 mb-4">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                { id: 'home', name: 'Home' },
+                { id: 'about', name: 'About' },
+                { id: 'skills', name: 'Skills' },
+                { id: 'services', name: 'Services' },
+                { id: 'projects', name: 'Projects' },
+                { id: 'testimonials', name: 'Testimonials' },
+                { id: 'contact', name: 'Contact' }
+              ].map((link) => (
+                <motion.button 
+                  key={link.name}
+                  onClick={scrollToSection(link.id)}
+                  whileHover={{ x: 3 }}
+                  className="text-left text-gray-300 hover:text-white transition-all flex items-center gap-2 text-sm group"
+                >
+                  <span className="text-xs text-cyan-400 transform transition-transform group-hover:scale-110">▹</span> 
+                  <span className="group-hover:text-cyan-50">{link.name}</span>
+                </motion.button>
               ))}
-            </ul>
+            </div>
           </div>
           
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-blue-400">Contact</h3>
+          <div className="md:w-1/3">
+            <h3 className="text-lg font-semibold text-cyan-300 mb-4">Contact</h3>
             <div className="space-y-3">
               <motion.a 
-                href="mailto:contact@karim.dev"
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                href="mailto:karimouiaboubob@gmail.com"
+                whileHover={{ x: 3 }}
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-sm"
               >
-                <FiMail className="text-blue-500" /> contact@karim.dev
+                <FiMail className="text-cyan-400" /> karimouiaboubob@gmail.com
               </motion.a>
               <motion.a 
-                href="tel:+212600000000"
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                href="tel:+212613821525"
+                whileHover={{ x: 3 }}
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-sm"
               >
-                <FiPhone className="text-blue-500" /> +212 600-000000
+                <FiPhone className="text-cyan-400" /> +212 613-821525
               </motion.a>
-              <p className="text-gray-500 mt-4 text-sm">
-                Based in Morocco <br />
-                Available Worldwide
+              <p className="text-gray-400 mt-4 text-sm">
+                Based in Morocco • Available Worldwide
               </p>
             </div>
           </div>
         </div>        
+        
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-blue-900/30 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
-            © {currentYear} Karim Dev. All rights reserved.
+        <div className="mt-12 pt-6 border-t border-blue-700/30">
+          <p className="text-gray-400 text-center  text-sm">
+            © {currentYear} Karim OUIABOUB. All rights reserved.
           </p>
-          <div className="mt-4 md:mt-0">
-            <ul className="flex space-x-6 text-gray-500 text-sm">
-              <motion.li whileHover={{ color: '#fff' }} className="hover:cursor-pointer">
-                Privacy Policy
-              </motion.li>
-              <motion.li whileHover={{ color: '#fff' }} className="hover:cursor-pointer">
-                Terms of Service
-              </motion.li>
-              <motion.li whileHover={{ color: '#fff' }} className="hover:cursor-pointer">
-                Cookies
-              </motion.li>
-            </ul>
-          </div>
         </div>
       </div>
-      
-     </footer>
+    </footer>
   );
 };
 

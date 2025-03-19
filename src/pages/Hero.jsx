@@ -22,7 +22,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-lg sm:text-xl shadow-lg hover:cursor-pointer hover:shadow-cyan-500/50 transition-all duration-300"
                 onClick={() => {
                   const projectsSection = document.getElementById('projects'); 
                   if (projectsSection) {

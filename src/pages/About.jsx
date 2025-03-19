@@ -96,10 +96,10 @@ const About = () => {
           transition={{ duration: 1 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 mb-6">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
             About Me
           </h2>
-          <p className="text-xl text-blue-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
             I'm a passionate full-stack developer with a love for creating beautiful and functional web applications.
           </p>
         </motion.div>

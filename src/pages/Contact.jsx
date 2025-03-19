@@ -5,8 +5,8 @@ import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiChevro
 
 const DevSkills = () => {
   return (
-    <div className="space-y-6">      
-      <motion.div 
+    <div className="space-y-6">
+      <motion.div
         whileHover={{ scale: 1.02 }}
         className="mt-8 p-5 bg-gradient-to-br from-blue-900/40 to-purple-900/40 border border-blue-500/30 rounded-xl backdrop-blur-md"
       >
@@ -80,7 +80,7 @@ const ContactLinks = () => {
 
 const CustomSelect = ({ value, onChange, options, placeholder, required }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <div className="relative">
       <motion.div
@@ -99,9 +99,9 @@ const CustomSelect = ({ value, onChange, options, placeholder, required }) => {
           <FiChevronDown />
         </motion.div>
       </motion.div>
-      
+
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
@@ -123,7 +123,7 @@ const CustomSelect = ({ value, onChange, options, placeholder, required }) => {
           ))}
         </motion.div>
       )}
-      
+
       {required && !value && (
         <input
           tabIndex={-1}
@@ -135,7 +135,7 @@ const CustomSelect = ({ value, onChange, options, placeholder, required }) => {
             position: "absolute"
           }}
           value={value}
-          onChange={() => {}}
+          onChange={() => { }}
           required
         />
       )}
@@ -144,12 +144,12 @@ const CustomSelect = ({ value, onChange, options, placeholder, required }) => {
 };
 
 const HireMeForm = () => {
-  const [formData, setFormData] = useState({ 
-    name: '', 
-    email: '', 
-    service: '', 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    service: '',
     timeline: '',
-    message: '' 
+    message: ''
   });
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
@@ -192,7 +192,7 @@ const HireMeForm = () => {
       <h3 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300 mb-8">
         Hire Me For Your Project
       </h3>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -221,7 +221,7 @@ const HireMeForm = () => {
           />
         </div>
       </div>
-      
+
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
           Service Required
@@ -234,7 +234,7 @@ const HireMeForm = () => {
           required
         />
       </div>
-      
+
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
           Timeline
@@ -247,7 +247,7 @@ const HireMeForm = () => {
           required
         />
       </div>
-      
+
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
           Project Details
@@ -279,6 +279,20 @@ const HireMeSection = () => {
   return (
     <section id='contact' className="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
       <div className="relative z-10 max-w-6xl w-full mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
+            Hire Me
+          </h2>
+          <p className="text-white mt-4 text-lg">
+            Let's build something amazing together. Open for freelance and full-time opportunities.
+          </p>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-12">
             <DevSkills />

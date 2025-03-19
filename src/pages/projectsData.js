@@ -138,26 +138,38 @@ export const projects = [
         testing: "E2E and unit testing procedures"
       },
       images: {
-        main: "/trips/main.jpg",
+        main: "./projects/ct2m2.png",
         screenshots: [
           {
-            url: "/trips/search.jpg",
+            url: "./projects/ct2m2.png",
             caption: "Trip search interface"
           },
           {
-            url: "/trips/booking.jpg",
+            url: "./projects/ct2m1.png",
+            caption: "interface"
+          },
+          {
+            url: "./projects/ct2m3.jpeg",
             caption: "Booking process"
           },
           {
-            url: "/trips/admin.jpg",
+            url: "./projects/ct2m4.jpeg",
             caption: "Admin dashboard"
           },
           {
-            url: "/trips/analytics.jpg",
+            url: "./projects/ct2m5.png",
+            caption: "Booking analytics"
+          },
+          {
+            url: "./projects/ct2m6.png",
+            caption: "Booking analytics"
+          },
+          {
+            url: "./projects/ct2m7.png",
             caption: "Booking analytics"
           }
         ],
-        architecture: "/trips/architecture-diagram.svg"
+        architecture: "./logo.svg"
       },
       technologies: [
         {
@@ -197,7 +209,7 @@ export const projects = [
         ]
       },
       links: {
-        demo: "https://trips.example.com",
+        demo: "https://charmingtours2morocco.com",
         github: "https://github.com/example/trip-booking-system",
         docs: "https://docs.trips.example.com"
       }

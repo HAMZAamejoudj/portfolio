@@ -180,10 +180,10 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
             Skills & Expertise
           </h2>
-          <p className="text-blue-300 mt-4 text-lg">
+          <p className="text-white mt-4 text-lg">
             Crafting digital experiences with modern technologies
           </p>
         </motion.div>
