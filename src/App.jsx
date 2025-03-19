@@ -3,14 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Loading from './components/Loading';
 import './App.css';
 import { NavbarContext } from './pages/Projects'; // Import context from Projects
+import Footer from './pages/Footer';
 
 const Navbar = lazy(() => import('./pages/Navbar'));
 const Hero = lazy(() => import('./pages/Hero'));
 const About = lazy(() => import('./pages/About'));
 const Skills = lazy(() => import('./pages/Skills'));
 const Projects = lazy(() => import('./pages/Projects'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Testimonials = lazy(() => import('./pages/Testimonials'));
+const HireMeSection = lazy(() => import('./pages/Contact'));
+const ServicesSection = lazy(() => import('./pages/ServicesSection'));
+const TestimonialsSystem = lazy(() => import('./pages/TestimonialsSystem'));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,10 +55,14 @@ const App = () => {
                   <Hero />
                   <About />
                   <Skills />
+                  <ServicesSection />
                   <Projects />
-                  <Testimonials />
-                  <Contact />
+                  {/* <Testimonials />
+                  <TestimonialForm/> */}
+                  <TestimonialsSystem/>
+                  <HireMeSection />
                 </main>
+                <Footer/>
               </Suspense>
               
               <div className="fixed inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10 pointer-events-none" />

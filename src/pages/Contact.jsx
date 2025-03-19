@@ -3,9 +3,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiCode, FiServer, FiLayout, FiDatabase, FiFeather, FiChevronDown } from 'react-icons/fi';
 
-const ContactScene = () => {
+const HireMeScene = () => {
   const particlesRef = useRef();
   const auroraRef = useRef();
 
@@ -13,49 +13,50 @@ const ContactScene = () => {
     const time = state.clock.getElapsedTime();
     
     if (particlesRef.current) {
-      particlesRef.current.rotation.y += 0.0002;
-      particlesRef.current.rotation.x = Math.sin(time * 0.1) * 0.1;
+      particlesRef.current.rotation.y += 0.0003;
+      particlesRef.current.rotation.x = Math.sin(time * 0.1) * 0.15;
     }
     
     if (auroraRef.current) {
-      auroraRef.current.position.y = Math.sin(time * 0.2) * 2;
-      auroraRef.current.rotation.z = time * 0.1;
+      auroraRef.current.position.y = Math.sin(time * 0.2) * 2.5;
+      auroraRef.current.rotation.z = time * 0.15;
     }
   });
 
   return (
     <>
-      <ambientLight intensity={0.2} />
-      <pointLight position={[10, 10, 10]} intensity={0.5} color="#90CDF4" />
+      <ambientLight intensity={0.3} />
+      <pointLight position={[10, 10, 10]} intensity={0.7} color="#4FD1C5" />
+      <pointLight position={[-10, -5, -10]} intensity={0.5} color="#805AD5" />
       
       <group ref={particlesRef}>
         <Stars 
-          radius={100}
-          depth={50}
-          count={5000}
-          factor={4}
-          saturation={0}
+          radius={120}
+          depth={60}
+          count={7000}
+          factor={5}
+          saturation={0.5}
           fade
-          speed={1}
+          speed={1.5}
         />
       </group>
       
       <group ref={auroraRef}>
-        {Array.from({ length: 50 }).map((_, i) => (
+        {Array.from({ length: 70 }).map((_, i) => (
           <mesh 
             key={i} 
             position={[
-              Math.sin(i / 10) * 20,
-              Math.cos(i / 10) * 5 + 10,
-              Math.cos(i / 10) * 20
+              Math.sin(i / 10) * 25,
+              Math.cos(i / 10) * 7 + 10,
+              Math.cos(i / 10) * 25
             ]}
-            scale={Math.random() * 2 + 1}
+            scale={Math.random() * 2.5 + 1}
           >
-            <sphereGeometry args={[0.1, 8, 8]} />
+            <sphereGeometry args={[0.12, 8, 8]} />
             <meshBasicMaterial 
-              color={i % 2 === 0 ? "#4FD1C5" : "#90CDF4"} 
+              color={i % 3 === 0 ? "#4FD1C5" : i % 3 === 1 ? "#90CDF4" : "#805AD5"} 
               transparent
-              opacity={0.3}
+              opacity={0.4}
             />
           </mesh>
         ))}
@@ -64,47 +65,66 @@ const ContactScene = () => {
       <OrbitControls 
         enableZoom={false}
         autoRotate
-        autoRotateSpeed={0.5}
+        autoRotateSpeed={0.4}
       />
     </>
   );
 };
-const ContactInfo = () => {
+
+const DevSkills = () => {
+  return (
+    <div className="space-y-6">      
+      <motion.div 
+        whileHover={{ scale: 1.02 }}
+        className="mt-8 p-5 bg-gradient-to-br from-blue-900/40 to-purple-900/40 border border-blue-500/30 rounded-xl backdrop-blur-md"
+      >
+        <h4 className="text-xl font-bold text-blue-300 mb-2">Available for Remote Work & Relocation</h4>
+        <p className="text-gray-300">Currently accepting new projects and collaboration opportunities</p>
+      </motion.div>
+    </div>
+  );
+};
+
+const ContactLinks = () => {
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/karim', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/karim', label: 'LinkedIn' },
-    { icon: FiTwitter, href: 'https://twitter.com/karim', label: 'Twitter' },
-    { icon: FiInstagram, href: 'https://instagram.com/karim', label: 'Instagram' }
+    { icon: FiGithub, href: 'https://github.com/Jhonwal', label: 'GitHub', color: 'from-gray-600 to-gray-800' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/karim-ouiaboub-136178283/', label: 'LinkedIn', color: 'from-blue-600 to-blue-800' },
+    { icon: FiTwitter, href: 'https://twitter.com/karim', label: 'Twitter', color: 'from-blue-400 to-blue-600' },
+    { icon: FiInstagram, href: 'https://instagram.com/wag.uer', label: 'Instagram', color: 'from-pink-500 to-purple-600' }
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="mt-12 space-y-8">
       <div>
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">Contact Information</h3>
+        <h3 className="text-2xl font-bold text-blue-400 mb-6">Contact Me Directly</h3>
         <div className="space-y-4">
           <motion.div
             whileHover={{ x: 10 }}
-            className="flex items-center space-x-4 text-gray-300"
+            className="flex items-center space-x-4 text-gray-200"
           >
-            <FiMail className="text-blue-400 text-xl" />
+            <div className="p-3 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg">
+              <FiMail className="text-white text-xl" />
+            </div>
             <a href="mailto:contact@karim.dev" className="hover:text-blue-400 transition-colors">
-              contact@karim.dev
+              karimouiaboubob@gmail.com
             </a>
           </motion.div>
           <motion.div
             whileHover={{ x: 10 }}
-            className="flex items-center space-x-4 text-gray-300"
+            className="flex items-center space-x-4 text-gray-200"
           >
-            <FiPhone className="text-blue-400 text-xl" />
+            <div className="p-3 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg">
+              <FiPhone className="text-white text-xl" />
+            </div>
             <a href="tel:+212600000000" className="hover:text-blue-400 transition-colors">
-              +212 600-000000
+              +212 613-821525
             </a>
           </motion.div>
         </div>
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-blue-400 mb-6">Social Media</h3>
+        <h3 className="text-2xl font-bold text-blue-400 mb-6">Connect With Me</h3>
         <div className="grid grid-cols-2 gap-4">
           {socialLinks.map((social) => (
             <motion.a
@@ -112,12 +132,12 @@ const ContactInfo = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              className={`flex items-center space-x-3 p-4 bg-gradient-to-r ${social.color} rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all`}
             >
-              <social.icon className="text-blue-400 text-xl" />
-              <span className="text-gray-300">{social.label}</span>
+              <social.icon className="text-white text-xl" />
+              <span className="text-white font-medium">{social.label}</span>
             </motion.a>
           ))}
         </div>
@@ -126,9 +146,101 @@ const ContactInfo = () => {
   );
 };
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+const CustomSelect = ({ value, onChange, options, placeholder, required }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <div className="relative">
+      <motion.div
+        onClick={() => setIsOpen(!isOpen)}
+        whileHover={{ scale: 1.01 }}
+        className="w-full px-4 py-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-lg 
+                 text-white cursor-pointer flex justify-between items-center"
+      >
+        <span className={value ? "text-white" : "text-gray-400"}>
+          {value || placeholder}
+        </span>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <FiChevronDown />
+        </motion.div>
+      </motion.div>
+      
+      {isOpen && (
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute z-50 w-full mt-1 bg-gradient-to-b from-blue-900/90 to-purple-900/90 border border-blue-500/30 
+                   rounded-lg overflow-hidden shadow-lg backdrop-blur-md max-h-60 overflow-y-auto"
+        >
+          {options.map((option) => (
+            <motion.div
+              key={option}
+              onClick={() => {
+                onChange({ target: { value: option } });
+                setIsOpen(false);
+              }}
+              whileHover={{ backgroundColor: "rgba(79, 209, 197, 0.2)" }}
+              className="px-4 py-3 cursor-pointer hover:text-blue-300 transition-colors"
+            >
+              {option}
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
+      
+      {required && !value && (
+        <input
+          tabIndex={-1}
+          autoComplete="off"
+          style={{
+            opacity: 0,
+            width: "100%",
+            height: 0,
+            position: "absolute"
+          }}
+          value={value}
+          onChange={() => {}}
+          required
+        />
+      )}
+    </div>
+  );
+};
+
+const HireMeForm = () => {
+  const [formData, setFormData] = useState({ 
+    name: '', 
+    email: '', 
+    service: '', 
+    timeline: '',
+    message: '' 
+  });
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+
+  const services = [
+    "Full Stack Development",
+    "Frontend Development",
+    "Backend Development",
+    "E-commerce Website",
+    "Web Application",
+    "UI/UX Design",
+    "API Integration",
+    "Database Design",
+    "Performance Optimization",
+    "Other (Please Specify)"
+  ];
+
+  const timelineOptions = [
+    "Less than 1 month",
+    "1-3 months",
+    "3-6 months",
+    "6+ months",
+    "Ongoing"
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -141,92 +253,120 @@ const ContactForm = () => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6 }}
       onSubmit={handleSubmit}
-      className="space-y-6"
+      className="space-y-6 bg-gradient-to-b from-blue-900/30 to-black/80 p-8 rounded-2xl border border-blue-500/20 backdrop-blur-sm shadow-xl"
     >
+      <h3 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300 mb-8">
+        Hire Me For Your Project
+      </h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Name
+          </label>
+          <motion.input
+            whileFocus={{ scale: 1.01 }}
+            type="text"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            className="w-full px-4 py-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-white"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Email
+          </label>
+          <motion.input
+            whileFocus={{ scale: 1.01 }}
+            type="email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            className="w-full px-4 py-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-white"
+            required
+          />
+        </div>
+      </div>
+      
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
-          Name
+          Service Required
         </label>
-        <motion.input
-          whileFocus={{ scale: 1.01 }}
-          type="text"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-white"
+        <CustomSelect
+          value={formData.service}
+          onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+          options={services}
+          placeholder="Select a service"
           required
         />
       </div>
+      
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
-          Email
+          Timeline
         </label>
-        <motion.input
-          whileFocus={{ scale: 1.01 }}
-          type="email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-white"
+        <CustomSelect
+          value={formData.timeline}
+          onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+          options={timelineOptions}
+          placeholder="Select timeline"
           required
         />
       </div>
+      
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
-          Message
+          Project Details
         </label>
         <motion.textarea
           whileFocus={{ scale: 1.01 }}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           rows="4"
-          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-white"
+          className="w-full px-4 py-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors text-white"
           required
+          placeholder="Describe your project requirements, goals, and any additional details..."
         />
       </div>
+
       <motion.button
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
         type="submit"
-        className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all"
+        className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/20 transition-all"
       >
-        Send Message
+        Send Inquiry
       </motion.button>
     </motion.form>
   );
 };
 
-const Contact = () => {
+const HireMeSection = () => {
   return (
-    <section id='contact' className="min-h-screen relative bg-black overflow-hidden py-20">
-      <div className="absolute inset-0">
-        <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
+    <section id='contact' className="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Canvas>
           <Suspense fallback={null}>
-            <ContactScene />
+            <HireMeScene />
           </Suspense>
         </Canvas>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
-            Get in Touch
-          </h2>
-          <p className="text-blue-300 mt-4">
-            Let's discuss your next project
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <ContactInfo />
-          <ContactForm />
+      <div className="relative z-10 max-w-6xl w-full mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="space-y-12">
+            <DevSkills />
+            <ContactLinks />
+          </div>
+          <div>
+            <HireMeForm />
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default HireMeSection;
