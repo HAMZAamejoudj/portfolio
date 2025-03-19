@@ -1,6 +1,4 @@
-import React, { Suspense, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float, Stars } from '@react-three/drei';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
@@ -99,28 +97,6 @@ const skills = [
   }
 ];
 
-
-const Scene = () => {
-  const meshRef = useRef();
-
-  useFrame(() => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += 0.01;
-    }
-  });
-
-  return (
-    <>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={1.5} />
-
-      {/* Stars for background effect */}
-      <Stars radius={100} depth={50} count={5000} factor={6} saturation={0} fade speed={1} />
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-    </>
-  );
-};
-
 const SkillCard = ({ skill, index }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
@@ -137,13 +113,6 @@ const SkillCard = ({ skill, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative group"
     >
-      <div className="absolute inset-0">
-        <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
-        </Canvas>
-      </div>
       <div 
         className="absolute inset-0 blur-xl rounded-xl transition-all duration-300"
         style={{ backgroundColor: skill.bgColor }}
@@ -202,20 +171,7 @@ const SkillCard = ({ skill, index }) => {
 
 const Skills = () => {
   return (
-    <section id='skills' className="min-h-screen w-full relative bg-black overflow-hidden py-20">
-      
-      {/* Background 3D Canvas */}
-      <div className="absolute inset-0">
-        <Canvas
-          camera={{ position: [0, 0, 10], fov: 75 }}
-          style={{ background: 'transparent' }}
-        >
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
-        </Canvas>
-      </div>
-
+    <section id='skills' className="min-h-screen w-full relative overflow-hidden py-20">
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div

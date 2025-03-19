@@ -1,7 +1,5 @@
-import React, { Suspense, useRef, useState } from 'react';
-import { motion,  } from 'framer-motion';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FiCode, FiServer, FiLayout, FiDatabase, FiSmartphone, FiShoppingBag } from 'react-icons/fi';
 
 // Import shadcn components
@@ -115,28 +113,6 @@ const ServiceCard = ({ service, onSelect }) => {
   );
 };
 
-const Scene = () => {
-    const meshRef = useRef();
-  
-    useFrame(() => {
-      if (meshRef.current) {
-        meshRef.current.rotation.y += 0.01;
-      }
-    });
-  
-    return (
-      <>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1.5} />
-  
-        {/* Stars for background effect */}
-        <Stars radius={100} depth={50} count={5000} factor={6} saturation={0} fade speed={1} />
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-      </>
-    );
-  };
-  
-  
 // Main Services Component
 const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -152,14 +128,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id='service' className="relative min-h-screen bg-black flex flex-col justify-center items-center p-8 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
-        </Canvas>
-      </div>
+    <section id='service' className="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2 

@@ -1,58 +1,5 @@
-import React, { Suspense, useRef, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Float, Stars } from "@react-three/drei";
+import React from "react";
 import { motion } from "framer-motion";
-
-// Enhanced 3D Scene Component
-const Scene = () => {
-  const meshRef = useRef();
-  const particlesRef = useRef();
-
-
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-
-    if (meshRef.current) {
-      meshRef.current.rotation.y += 0.002;
-      meshRef.current.rotation.x = Math.sin(time * 0.5) * 0.1;
-    }
-
-    if (particlesRef.current) {
-      particlesRef.current.rotation.y = time * 0.05;
-      particlesRef.current.rotation.x = time * 0.03;
-    }
-  });
-
-  return (
-    <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[10, 10, 10]} intensity={1.5} color="#3B82F6" />
-      <pointLight position={[-10, -10, -10]} intensity={1} color="#60A5FA" />
-
-      {/* Enhanced stars effect */}
-      <group ref={particlesRef}>
-        <Stars
-          radius={50}
-          depth={50}
-          count={3000}
-          factor={6}
-          saturation={1}
-          fade
-          speed={0.5}
-        />
-        <Stars
-          radius={100}
-          depth={50}
-          count={5000}
-          factor={4}
-          saturation={0}
-          fade
-          speed={1}
-        />
-      </group>
-    </>
-  );
-};
 
 const TimelineItem = ({ data, index, type }) => (
   <motion.div
@@ -90,6 +37,7 @@ const About = () => {
     link.click();
     document.body.removeChild(link);
   };
+
   const education = [
     {
       period: "2024 - Present",
@@ -110,7 +58,6 @@ const About = () => {
       description: "Focused on computer maintenance, networking, and troubleshooting.",
     },
   ];
-
 
   const experience = [
     {
@@ -139,18 +86,8 @@ const About = () => {
     },
   ];
 
-
   return (
-    <section id="about" className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-[#0A0E29] to-black shadow-2xl  text-white pb-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black/50 to-blue-900/20 animate-gradient-shift" />
-      <div className="absolute inset-0">
-        <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
-        </Canvas>
-      </div>
-
+    <section id="about" className="relative min-h-screen w-full overflow-hidden shadow-2xl text-white pb-20">
       {/* Content Container */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <motion.div
@@ -159,12 +96,6 @@ const About = () => {
           transition={{ duration: 1 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "100%" }}
-            transition={{ duration: 1.5, delay: 0.5 }}
-            className="h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto mb-8"
-          />
           <h2 className="text-5xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 mb-6">
             About Me
           </h2>

@@ -1,6 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiGithub, FiExternalLink, FiFolder, FiX } from 'react-icons/fi';
@@ -9,28 +7,6 @@ import { projects } from './projectsData';
 
 export const NavbarContext = React.createContext();
 
-const ProjectScene = () => {
-  const particlesRef = useRef();
-
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-    if (particlesRef.current) {
-      particlesRef.current.rotation.y = time * 0.05;
-      particlesRef.current.rotation.x = time * 0.03;
-    }
-  });
-
-  return (
-    <>
-      <ambientLight intensity={0.2} />
-      <pointLight position={[10, 10, 10]} intensity={1.5} color="#3B82F6" />
-      <group ref={particlesRef}>
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-      </group>
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-    </>
-  );
-};
 const ProjectDetails = ({ project, onClose }) => {
   const setNavbarVisible = React.useContext(NavbarContext);
   
@@ -347,16 +323,7 @@ const ProjectCard = ({ project, index }) => {
 };
 const Projects = () => {
   return (
-    <section id='projects' className="min-h-screen relative bg-black overflow-hidden py-20">
-      
-      <div className="absolute inset-0">
-        <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
-          <Suspense fallback={null}>
-            <ProjectScene />
-          </Suspense>
-        </Canvas>
-      </div>
-
+    <section id='projects' className="min-h-screen relative overflow-hidden py-20">
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

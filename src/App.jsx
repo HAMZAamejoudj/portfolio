@@ -4,6 +4,7 @@ import Loading from './components/Loading';
 import './App.css';
 import { NavbarContext } from './pages/Projects'; // Import context from Projects
 import Footer from './pages/Footer';
+import ThreeJSBackground from './components/ThreeJSBackground'; // Import the 3D background component
 
 const Navbar = lazy(() => import('./pages/Navbar'));
 const Hero = lazy(() => import('./pages/Hero'));
@@ -30,7 +31,7 @@ const App = () => {
   return (
     <AnimatePresence mode="wait">
       <NavbarContext.Provider value={setIsNavbarVisible}>
-        <div className={`app min-h-screen bg-gradient-to-b from-gray-900 to-black text-white transition-colors duration-300`}>
+        <div className={`app min-h-screen text-white transition-colors duration-300`}>
           {isLoading ? (
             <motion.div
               initial={{ opacity: 0 }}
@@ -47,8 +48,9 @@ const App = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="fixed inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 pointer-events-none" />
-              
+              {/* Add the 3D background component */}
+              <ThreeJSBackground />
+
               <Suspense fallback={<Loading />}>
                 {isNavbarVisible && <Navbar />}
                 <main className="relative z-10">
@@ -57,15 +59,11 @@ const App = () => {
                   <Skills />
                   <ServicesSection />
                   <Projects />
-                  {/* <Testimonials />
-                  <TestimonialForm/> */}
-                  <TestimonialsSystem/>
+                  <TestimonialsSystem />
                   <HireMeSection />
                 </main>
-                <Footer/>
+                <Footer />
               </Suspense>
-              
-              <div className="fixed inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10 pointer-events-none" />
             </motion.div>
           )}
         </div>

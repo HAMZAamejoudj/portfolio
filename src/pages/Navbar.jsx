@@ -59,7 +59,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600"
           >
-            Karim
+            <img src='logo.svg' className='w-20'/>
           </motion.div>
           
           <ul className="flex space-x-6">

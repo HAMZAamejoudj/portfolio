@@ -1,75 +1,7 @@
-import React, { Suspense, useState, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiCode, FiServer, FiLayout, FiDatabase, FiFeather, FiChevronDown } from 'react-icons/fi';
-
-const HireMeScene = () => {
-  const particlesRef = useRef();
-  const auroraRef = useRef();
-
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-    
-    if (particlesRef.current) {
-      particlesRef.current.rotation.y += 0.0003;
-      particlesRef.current.rotation.x = Math.sin(time * 0.1) * 0.15;
-    }
-    
-    if (auroraRef.current) {
-      auroraRef.current.position.y = Math.sin(time * 0.2) * 2.5;
-      auroraRef.current.rotation.z = time * 0.15;
-    }
-  });
-
-  return (
-    <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[10, 10, 10]} intensity={0.7} color="#4FD1C5" />
-      <pointLight position={[-10, -5, -10]} intensity={0.5} color="#805AD5" />
-      
-      <group ref={particlesRef}>
-        <Stars 
-          radius={120}
-          depth={60}
-          count={7000}
-          factor={5}
-          saturation={0.5}
-          fade
-          speed={1.5}
-        />
-      </group>
-      
-      <group ref={auroraRef}>
-        {Array.from({ length: 70 }).map((_, i) => (
-          <mesh 
-            key={i} 
-            position={[
-              Math.sin(i / 10) * 25,
-              Math.cos(i / 10) * 7 + 10,
-              Math.cos(i / 10) * 25
-            ]}
-            scale={Math.random() * 2.5 + 1}
-          >
-            <sphereGeometry args={[0.12, 8, 8]} />
-            <meshBasicMaterial 
-              color={i % 3 === 0 ? "#4FD1C5" : i % 3 === 1 ? "#90CDF4" : "#805AD5"} 
-              transparent
-              opacity={0.4}
-            />
-          </mesh>
-        ))}
-      </group>
-
-      <OrbitControls 
-        enableZoom={false}
-        autoRotate
-        autoRotateSpeed={0.4}
-      />
-    </>
-  );
-};
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiChevronDown } from 'react-icons/fi';
 
 const DevSkills = () => {
   return (
@@ -346,14 +278,6 @@ const HireMeForm = () => {
 const HireMeSection = () => {
   return (
     <section id='contact' className="relative min-h-screen flex flex-col justify-center items-center p-8 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Suspense fallback={null}>
-            <HireMeScene />
-          </Suspense>
-        </Canvas>
-      </div>
-
       <div className="relative z-10 max-w-6xl w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-12">

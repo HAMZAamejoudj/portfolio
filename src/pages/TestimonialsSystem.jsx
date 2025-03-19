@@ -376,9 +376,9 @@ const TestimonialsSystem = () => {
   };
 
   return (
-    <section id='testimonials' className="min-h-screen relative bg-black py-20">
-      <div className="absolute inset-0 bg-blue-500/5 background-grid opacity-20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black/50" />
+    <section id='testimonials' className="min-h-screen relative py-20">
+      {/* <div className="absolute inset-0 background-grid opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black/50" /> */}
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
