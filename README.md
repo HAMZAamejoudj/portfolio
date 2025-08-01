@@ -1,8 +1,41 @@
-# React + Vite
+# 💼 My Portfolio – Jhonwal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio built using **React**, **Tailwind CSS**, and **Framer Motion**. This is a showcase of my skills, projects, and services as a modern web developer.
 
-Currently, two official plugins are available:
+## 🔍 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio is designed to present my:
+- Bio and background
+- Skills and technologies
+- Services I offer
+- Projects I’ve worked on
+- Testimonials from collaborators or clients
+- Contact form for reaching out
+
+## 🚀 Tech Stack
+
+- **Frontend**: React, Tailwind CSS, Framer Motion
+- **UI Components**: ShadCN/UI, Lucide Icons
+- **Animations**: Framer Motion
+- **Version Control**: Git & GitHub
+
+## ✨ Features
+
+- Responsive and modern design
+- Smooth section transitions using Framer Motion
+- Reusable card and badge components
+- Easy-to-navigate layout
+- Mobile-first UI with clean UX
+
+## 🛠️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Jhonwal/my-portfolio.git
+cd my-portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
