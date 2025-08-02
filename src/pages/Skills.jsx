@@ -1,15 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { BiLogoVisualStudio } from 'react-icons/bi';
+import { SiIntellijidea } from "react-icons/si";
+import { SiEclipseide } from "react-icons/si";
+import { SiPrestashop } from "react-icons/si";
+import { SiJoomla } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import { 
-  SiReact, SiVuedotjs, SiTailwindcss, SiThreedotjs,
+  SiReact, SiVuedotjs, SiTailwindcss,
+  SiBootstrap, SiHtml5, SiCss3, SiJavascript,
   SiNodedotjs, SiLaravel, SiExpress, SiDjango,
-  SiMysql, SiMongodb, SiRedis,
-  SiDocker, SiAmazonwebservices, SiGithubactions,
+  SiMysql, SiMongodb, SiOracle, SiRedis,
+  SiWordpress, SiShopify, SiWix,
   SiFigma, SiAdobephotoshop, SiAdobeillustrator,
   SiBlender, SiGreensock, SiFramer,
   SiApachecassandra,
-  SiCanva
+  SiCanva,
+  SiPython, SiPhp
+   
+
 } from 'react-icons/si';
 
 const skills = [
@@ -24,7 +34,10 @@ const skills = [
       { name: 'React', icon: SiReact, level: 95 },
       { name: 'Vue.js', icon: SiVuedotjs, level: 80 },
       { name: 'TailwindCSS', icon: SiTailwindcss, level: 90 },
-      { name: 'Three.js', icon: SiThreedotjs, level: 70 }
+      { name: 'Bootstrap', icon: SiBootstrap, level: 70 },
+      { name: 'HTML5', icon: SiHtml5, level: 95 },
+      { name: 'CSS3', icon: SiCss3, level: 95 },
+      { name: 'JavaScript', icon: SiJavascript, level: 90 }
     ]
   },
   {
@@ -37,8 +50,12 @@ const skills = [
     technologies: [
       { name: 'Node.js', icon: SiNodedotjs, level: 70 },
       { name: 'Laravel', icon: SiLaravel, level: 95 },
-      { name: 'Express', icon: SiExpress, level: 70 },
       { name: 'Django', icon: SiDjango, level: 45 },
+      { name: 'Python', icon: SiPython, level: 75 },
+      { name: 'PHP', icon: SiPhp, level: 85 },
+      { name: 'JAVA', icon: FaJava , level: 69 },
+
+
     ]
   },
   {
@@ -51,21 +68,24 @@ const skills = [
     technologies: [
       { name: 'MySQL', icon: SiMysql, level: 95 },
       { name: 'MongoDB', icon: SiMongodb, level: 80 },
-      { name: 'Redis', icon: SiRedis, level: 75 },
-      { name: 'Cassandra', icon: SiApachecassandra, level: 65 },
+      { name:'Oracle', icon: SiOracle, level: 70}
     ]
   },
   {
-    name: 'DevOps & Cloud',
-    mainIcon: SiDocker,
-    level: 80,
-    color: '#2496ED',
-    bgColor: 'rgba(36, 150, 237, 0.1)',
-    borderColor: 'rgba(36, 150, 237, 0.4)',
+    name: 'CMS Development',
+    mainIcon: SiWordpress,
+    level: 85,
+    color: '#21759B',
+    bgColor: 'rgba(33, 117, 155, 0.1)',
+    borderColor: 'rgba(33, 117, 155, 0.4)',
     technologies: [
-      { name: 'Docker', icon: SiDocker, level: 85 },
-      { name: 'AWS', icon: SiAmazonwebservices, level: 80 },
-      { name: 'CI/CD', icon: SiGithubactions, level: 75 }
+      { name: 'WordPress', icon: SiWordpress, level: 90 },
+      { name: 'Shopify', icon: SiShopify, level: 80 },
+      { name: 'Wix', icon: SiWix, level: 90 },
+      { name: 'Prestashop', icon: SiPrestashop  , level: 90 },
+      { name: 'Joomla', icon: SiJoomla , level: 90 }
+
+
     ]
   },
   {
@@ -83,16 +103,19 @@ const skills = [
     ]
   },
   {
-    name: '3D & Animation',
-    mainIcon: SiBlender,
-    level: 35,
+    name: 'Development Environments',
+    mainIcon: BiLogoVisualStudio,
+    level: 80,
     color: '#F5792A',
     bgColor: 'rgba(245, 121, 42, 0.1)',
     borderColor: 'rgba(245, 121, 42, 0.4)',
     technologies: [
-      { name: 'Three.js', icon: SiThreedotjs, level: 70 },
-      { name: 'GSAP', icon: SiGreensock, level: 65 },
-      { name: 'Framer', icon: SiFramer, level: 60 },
+      { name: 'VisualStudioCode', icon: BiLogoVisualStudio, level: 50 },
+      { name: 'IntelliJ IDEA', icon: SiIntellijidea, level: 50 },
+      { name: 'Eclipse', icon: SiEclipseide, level: 60 },
+      { name: 'XAAMP', level: 80 },
+
+
     ]
   }
 ];
@@ -148,7 +171,7 @@ const SkillCard = ({ skill, index }) => {
             <div key={i} className="space-y-1">
               <div className="flex justify-between text-sm text-white">
                 <span>{tech.name}</span>
-                <tech.icon />
+                {tech.icon && <tech.icon />}
               </div>
               <div className="w-full bg-blue-900 rounded-full h-2 overflow-hidden">
                 <motion.div

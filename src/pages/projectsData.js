@@ -1,89 +1,87 @@
 export const projects = [
-  {
-    id: "social-media-app",
-    title: "Social Media App",
-    shortDescription: "A social media platform built with Cassandra, featuring posts, messages, likes, and hashtags.",
+  
+  
+ {
+    id: "Car Rental Management System",
+    title: "Car Rental Management System",
+    shortDescription: "A Car Rental Management System built with a modern tech stack, featuring vehicle booking, customer management, payment processing, rental tracking, and availability updates.",
     concept: {
-      overview: "A modern social media platform designed to handle large-scale data with high availability and fault tolerance.",
-      problem: "Traditional SQL databases struggle with the scale and performance requirements of social media applications.",
-      solution: "Leveraging Cassandra's distributed architecture to handle massive amounts of social data efficiently.",
+      overview: "The Car Rental Management System is a comprehensive solution that automates vehicle booking, fleet management, customer data handling, and payment processing to improve efficiency and customer experience in car rental businesses.",
+      problem: "Manual management of car rentals leads to inefficiencies in booking, vehicle tracking, customer data handling, and payment processing.",
+      solution: "The Car Rental Management System automates bookings, tracks vehicle availability and maintenance, manages customer data, and integrates secure payment processing, improving efficiency and transparency. ",
       keyFeatures: [
-        "Real-time post updates and notifications",
-        "Distributed message system",
-        "Scalable hashtag indexing",
-        "Fault-tolerant data storage",
+        "Real-Time Vehicle Booking & Availability",
+        "Fleet Management",
+        "Customer Profile Management",
+        "Secure Payment Integration",
       ]
     },
     technical: {
-      architecture: "Microservices architecture with event-driven components",
+      architecture: "The Car Rental Management System architecture is a multi-layered design that includes a user-friendly frontend, a backend for business logic, a secure database for data storage, integrated payment gateways, an admin panel for management, and optional API layers for scalability and seamless communication across platforms.",
     },
     images: {
-      main: "/projects/reseau_home.png",
+      main: "/projects/location1.PNG",
       screenshots: [
         {
-          url: "/projects/reseau_add_post.png",
-          caption: "Add post interface"
+          url: "/projects/location0.PNG",
+          caption: "Dashboard"
         },
         {
-          url: "/projects/reseau_edite_profile_info.png",
-          caption: "Edit profile info page"
+          url: "/projects/location2.PNG",
+          caption: "Outstanding Orders"
         },
         {
-          url: "/projects/reseau_home.png",
-          caption: "Home page"
+          url: "/projects/location3.PNG",
+          caption: "Facture"
         },
         {
-          url: "/projects/reseau_login.png",
-          caption: "Login screen"
+          url: "/projects/locationnoti.PNG",
+          caption: "Notification"
         },
         {
-          url: "/projects/reseau_my_profile.png",
-          caption: "User profile overview"
+          url: "/projects/location4.PNG",
+          caption: "Recent Rentals and Collections"
         },
         {
-          url: "/projects/reseau_sign_up.png",
-          caption: "Sign-up page"
+          url: "/projects/locationvoi.PNG",
+          caption: "Vehicles"
         },
         {
-          url: "/projects/reseau_user_conversation.png",
-          caption: "User conversation view"
+          url: "/projects/locationc.PNG",
+          caption: "Clients"
         },
         {
-          url: "/projects/reseau_user_freinds.png",
-          caption: "Friends list"
+          url: "/projects/locationag.PNG",
+          caption: "Agency Management"
         },
         {
-          url: "/projects/reseau_user_messages.png",
-          caption: "User messages interface"
+          url: "/projects/locationlog.PNG",
+          caption: "login interface"
         },
         {
-          url: "/projects/reseau_user_profile.png",
-          caption: "User profile page"
+          url: "/projects/locationd.PNG",
+          caption: "logout"
         }
       ],
       architecture: "/social-media/architecture-diagram.svg"
     },
     technologies: [
       {
-        name: "React",
-        version: "18.2.0",
-        usage: "Frontend framework for building the user interface"
-      },
-      {
-        name: "Node.js",
-        version: "20.14.0",
-        usage: "Backend server runtime"
-      },
-      {
-        name: "Cassandra",
-        version: "4.1.8",
-        usage: "Distributed database for storing social data"
+        name: "PHP",
+        version: "8.4.11,",
+        usage: "Server-side scripting language for building dynamic web applications"
       },
       {
         name: "TailwindCSS",
-        version: "3.4.17",
+        version: "4.4.17",
         usage: "Utility-first CSS framework for styling"
+      },
+        {
+       name: "MySQL",
+        version: "8.0",
+        usage: "Database"
       }
+
     ],
     performance: {
       metrics: [
@@ -91,194 +89,220 @@ export const projects = [
         "Average response time < 100ms",
       ],
       optimizations: [
-        "Database query optimization",
-        "Lazy loading of images",
-        "Code splitting"
+        "Real-Time Availability Updates",
+        "Automated Fleet Maintenance Tracking",
+        "Efficient Payment Gateway Integration"
       ]
     },
     links: {
       demo: "https://social.example.com",
-      github: "https://github.com/example/social-media-app",
+      github: "https://github.com/HAMZAamejoudj/location",
       docs: "https://docs.social.example.com"
     }
   },
   {
-    id: "trip-booking-system",
-    title: "Charming Tours 2 Morocco",
-    shortDescription: "A tour booking platform where users can browse and reserve trips, with an admin dashboard for managing reservations.",
+       id: "moroccanorganica",
+    title: "Moroccan Organica",
+    shortDescription: "Moroccan Organica is a trusted wholesale supplier of certified organic Moroccan beauty products, offering pure argan oil, prickly pear seed oil, and customizable private labeling for global brands.",
     concept: {
-      overview: "A comprehensive travel booking platform that connects travelers with unique experiences.",
-      problem: "Traditional travel booking systems lack personalization and real-time availability updates.",
-      solution: "Building a modern platform with real-time inventory management and personalized recommendations.",
+      overview: "Moroccan Organica is a premier wholesale supplier of certified organic Moroccan beauty products, offering argan oil, prickly pear seed oil, and private labeling services for global brands.",
+      problem: "Before the Moroccan Organica website, issues like limited online purchasing, credibility doubts, restricted payment methods, logistical barriers, and low brand visibility were addressed by launching an e-commerce platform with secure payments, certifications, optimized logistics, and SEO-driven marketing.",
+      solution: "The Car Rental Management System automates bookings, tracks vehicle availability and maintenance, manages customer data, and integrates secure payment processing, improving efficiency and transparency. ",
       keyFeatures: [
-        "Real-time availability checking",
-        "Personalized trip recommendations",
-        "Administrative dashboard",
-        "Dynamic pricing engine",
-        "Review and rating system"
+        "Real-Time Vehicle Booking & Availability",
+        "Fleet Management",
+        "Customer Profile Management",
+        "Secure Payment Integration",
       ]
     },
     technical: {
-      architecture: "Monolithic Laravel application with React frontend",
+      architecture: "The Car Rental Management System architecture is a multi-layered design that includes a user-friendly frontend, a backend for business logic, a secure database for data storage, integrated payment gateways, an admin panel for management, and optional API layers for scalability and seamless communication across platforms.",
     },
     images: {
-      main: "./projects/ct2m2.png",
+      main: "/projects/orga home1.PNG",
       screenshots: [
         {
-          url: "./projects/ct2m2.png",
-          caption: "Trip search interface"
+          url: "/projects/location0.PNG",
+          caption: "Dashboard"
         },
         {
-          url: "./projects/ct2m1.png",
-          caption: "interface"
+          url: "/projects/location2.PNG",
+          caption: "Outstanding Orders"
         },
         {
-          url: "./projects/ct2m3.jpeg",
-          caption: "Booking process"
+          url: "/projects/location3.PNG",
+          caption: "Facture"
         },
         {
-          url: "./projects/ct2m4.jpeg",
-          caption: "Admin dashboard"
+          url: "/projects/locationnoti.PNG",
+          caption: "Notification"
         },
         {
-          url: "./projects/ct2m5.png",
-          caption: "Booking analytics"
+          url: "/projects/location4.PNG",
+          caption: "Recent Rentals and Collections"
         },
         {
-          url: "./projects/ct2m6.png",
-          caption: "Booking analytics"
+          url: "/projects/locationvoi.PNG",
+          caption: "Vehicles"
         },
         {
-          url: "./projects/ct2m7.png",
-          caption: "Booking analytics"
+          url: "/projects/locationc.PNG",
+          caption: "Clients"
+        },
+        {
+          url: "/projects/locationag.PNG",
+          caption: "Agency Management"
+        },
+        {
+          url: "/projects/locationlog.PNG",
+          caption: "login interface"
+        },
+        {
+          url: "/projects/locationd.PNG",
+          caption: "logout"
         }
       ],
-      architecture: "./logo.svg"
+      architecture: "/social-media/architecture-diagram.svg"
     },
     technologies: [
       {
-        name: "Laravel",
-        version: "11.9",
-        usage: "Backend framework"
-      },
-      {
-        name: "React",
-        version: "18.2.0",
-        usage: "Frontend framework"
-      },
-      {
-        name: "MySQL",
-        version: "8.0",
-        usage: "Database"
+        name: "PHP",
+        version: "8.4.11,",
+        usage: "Server-side scripting language for building dynamic web applications"
       },
       {
         name: "TailwindCSS",
-        version: "3.4.17",
-        usage: "Styling"
+        version: "4.4.17",
+        usage: "Utility-first CSS framework for styling"
+      },
+        {
+       name: "MySQL",
+        version: "8.0",
+        usage: "Database"
       }
+
     ],
     performance: {
       metrics: [
-        "99.5% uptime",
-        "Average response time < 400ms"
+        "99.9% uptime",
+        "Average response time < 100ms",
       ],
       optimizations: [
-        "Database query optimization",
-        "Image CDN",
-        "Lazy loading",
-        "Rate limiting"
+        "Real-Time Availability Updates",
+        "Automated Fleet Maintenance Tracking",
+        "Efficient Payment Gateway Integration"
       ]
     },
     links: {
-      demo: "https://charmingtours2morocco.com",
-      github: "https://github.com/example/trip-booking-system",
-      docs: "https://docs.trips.example.com"
+      demo: "https://moroccanorganica.com/",
+      github: "https://github.com/HAMZAamejoudj",
+      docs: "https://moroccanorganica.com/"
     }
   },
+  
   {
-    "id": "bitcoin-price-prediction",
-    "title": "Bitcoin Price Prediction Model",
-    "shortDescription": "A deep learning model for predicting Bitcoin price fluctuations using historical financial data.",
-    "concept": {
-      "overview": "An advanced machine learning system for Bitcoin market analysis and prediction.",
-      "problem": "Traditional analysis tools for Bitcoin lack the ability to process complex market patterns effectively.",
-      "solution": "Implementing deep learning models to analyze multiple data sources and predict Bitcoin price movements.",
-      "keyFeatures": [
-        "Real-time market data processing",
-        "Bitcoin price fluctuation analysis",
-        "Technical indicator integration"
+    id: "rechargeverte",
+    title: "Recharge Verte",
+    shortDescription: "A Car Rental Management System built with a modern tech stack, featuring vehicle booking, customer management, payment processing, rental tracking, and availability updates.",
+    concept: {
+      overview: "The Car Rental Management System is a comprehensive solution that automates vehicle booking, fleet management, customer data handling, and payment processing to improve efficiency and customer experience in car rental businesses.",
+      problem: "Manual management of car rentals leads to inefficiencies in booking, vehicle tracking, customer data handling, and payment processing.",
+      solution: "The Car Rental Management System automates bookings, tracks vehicle availability and maintenance, manages customer data, and integrates secure payment processing, improving efficiency and transparency. ",
+      keyFeatures: [
+        "Real-Time Vehicle Booking & Availability",
+        "Fleet Management",
+        "Customer Profile Management",
+        "Secure Payment Integration",
       ]
     },
-    "technical": {
-      "architecture": "Microservices architecture with ML pipeline",
+    technical: {
+      architecture: "The Car Rental Management System architecture is a multi-layered design that includes a user-friendly frontend, a backend for business logic, a secure database for data storage, integrated payment gateways, an admin panel for management, and optional API layers for scalability and seamless communication across platforms.",
     },
-    "images": {
-      "main": "./projects/deep_learning_home.png",
-      "screenshots": [
+    images: {
+      main: "/projects/recharge1.PNG",
+      screenshots: [
         {
-          "url": "./projects/deep_learning_model_info.png",
-          "caption": "Deep learning model information"
+          url: "/projects/location0.PNG",
+          caption: "Dashboard"
         },
         {
-          "url": "./projects/deep_learning_prediction.png",
-          "caption": "Predictions using the deep learning model"
+          url: "/projects/location2.PNG",
+          caption: "Outstanding Orders"
         },
         {
-          "url": "./projects/deep_learning_test_predict.png",
-          "caption": "Test data prediction results"
+          url: "/projects/location3.PNG",
+          caption: "Facture"
         },
         {
-          "url": "./projects/deep_learning_training_predict.png",
-          "caption": "Training phase prediction results"
+          url: "/projects/locationnoti.PNG",
+          caption: "Notification"
         },
         {
-          "url": "./projects/deep_learning_training_resulte_loss_training.png",
-          "caption": "Training loss chart during deep learning process"
+          url: "/projects/location4.PNG",
+          caption: "Recent Rentals and Collections"
+        },
+        {
+          url: "/projects/locationvoi.PNG",
+          caption: "Vehicles"
+        },
+        {
+          url: "/projects/locationc.PNG",
+          caption: "Clients"
+        },
+        {
+          url: "/projects/locationag.PNG",
+          caption: "Agency Management"
+        },
+        {
+          url: "/projects/locationlog.PNG",
+          caption: "login interface"
+        },
+        {
+          url: "/projects/locationd.PNG",
+          caption: "logout"
         }
       ],
-      "architecture": "/projects/architecture-diagram.svg"
+      architecture: "/social-media/architecture-diagram.svg"
     },
-    "technologies": [
+    technologies: [
       {
-        "name": "Python",
-        "version": "3.11",
-        "usage": "Core programming language"
+        name: "PHP",
+        version: "8.4.11,",
+        usage: "Server-side scripting language for building dynamic web applications"
       },
       {
-        "name": "TensorFlow",
-        "version": "2.18.0",
-        "usage": "Deep learning framework"
+        name: "TailwindCSS",
+        version: "4.4.17",
+        usage: "Utility-first CSS framework for styling"
       },
-      {
-        "name": "Pandas",
-        "version": "2.2.3",
-        "usage": "Data manipulation"
-      },
-      {
-        "name": "Scikit-learn",
-        "version": "1.6.1",
-        "usage": "Machine learning utilities"
+        {
+       name: "MySQL",
+        version: "8.0",
+        usage: "Database"
       }
+
     ],
-    "performance": {
-      "metrics": [
-        "85% prediction accuracy",
-        "Sub-second prediction time",
-        "Processing 1M data points"
+    performance: {
+      metrics: [
+        "99.9% uptime",
+        "Average response time < 100ms",
       ],
-      "optimizations": [
-        "GPU acceleration",
-        "Distributed training",
-        "Batch prediction support"
+      optimizations: [
+        "Real-Time Availability Updates",
+        "Automated Fleet Maintenance Tracking",
+        "Efficient Payment Gateway Integration"
       ]
     },
-    "links": {
-      "demo": "https://bitcoin.example.com",
-      "github": "https://github.com/example/bitcoin-price-prediction",
-      "docs": "https://docs.bitcoin.example.com"
+    links: {
+      demo: "https://social.example.com",
+      github: "https://github.com/HAMZAamejoudj/location",
+      docs: "https://docs.social.example.com"
     }
-  }
+  },
+  
+
 
 ];
+
 
 export default projects;

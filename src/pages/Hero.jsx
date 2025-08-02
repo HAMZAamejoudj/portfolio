@@ -13,9 +13,9 @@ const Hero = () => {
             className="md:w-1/2 text-left px-4 sm:px-0"
           >
             <div className="mb-8">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-200 via-cyan-300 to-blue-300">
-                Hello, I'm Karim Ouiaboub
-              </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-200 via-cyan-300 to-blue-300" style={{ fontFamily: 'Arial, sans-serif' }}>
+             Hello, I'm Hamza Amejoudj
+            </h1>
               <p className="text-xl sm:text-2xl text-cyan-200 mb-8">
                 Full Stack Developer
               </p>
@@ -40,22 +40,22 @@ const Hero = () => {
             transition={{ duration: 1 }}
             className="md:w-1/2 mt-10 md:mt-0 relative px-4 sm:px-0"
           >
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: 3 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto relative group"
-            >
-              <div className="absolute inset-0 bg-cyan-500 rounded-full opacity-20 blur-3xl group-hover:blur-4xl transition-all duration-300"></div>
-              <div className="absolute inset-4 bg-blue-400 rounded-full opacity-20 blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
-              <img
-                src="/profile.png"
-                alt="Karim Ouiaboub"
-                className="w-full h-full object-cover rounded-full border-8 border-cyan-500 transform transition-all duration-500 hover:border-blue-400 relative z-10 shadow-2xl"
-              />
-
-              <div className="absolute inset-0 border-8 border-cyan-400 rounded-full opacity-50 animate-pulse"></div>
-              <div className="absolute -inset-2 border-4 border-blue-300 rounded-full opacity-30 animate-ping"></div>
-            </motion.div>
+ <motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+  className="flex flex-col items-center"
+>
+  <div className="relative mb-6 group">
+    <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-teal-200 shadow-2xl hover:shadow-teal-300/50 transition-all duration-500 hover:border-teal-500">
+      <img
+        src="/img.jpg"
+        alt="Hamza Amejoudj"
+        className="w-full h-full object-contain group-hover:brightness-110 group-hover:scale-110 transition-all duration-500"
+      />
+    </div>
+  </div>
+</motion.div>
           </motion.div>
         </div>
       </div>

@@ -31,25 +31,20 @@ const TimelineItem = ({ data, index, type }) => (
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
-    link.download = "karim_ouiaboub_cv.pdf";
+    link.href = "/CVHAMZA_Amejoudj.pdf";
+    link.download = "CVHAMZA_Amejoudj.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const education = [
-    {
-      period: "2024 - Present",
-      degree: "Excellence Bachelor's in Information Systems and Artificial Intelligence",
-      institution: "Polydisciplinary Faculty of Khouribga - Sultan Moulay Slimane University",
-      description: "Advanced studies in information systems and artificial intelligence.",
-    },
+   
     {
       period: "2022 - 2024",
-      degree: "Higher Technician in Multimedia and Web Development.",
-      institution: "Preparatory Class for Higher Technician, Errachidia",
-      description: "Specialized in multimedia, web development, and UI/UX design.",
+      degree: "Higher Technician in Web Development",
+      institution: "Miage Salé School",
+      description: "Specialized in web development, and UI/UX design.",
     },
     {
       period: "2020 - 2022",
@@ -60,30 +55,25 @@ const About = () => {
   ];
 
   const experience = [
-    {
-      period: "2024 - Present",
-      role: "Full-Stack Developer",
-      company: "Charming Tours to Morocco",
-      description: "Developed a trip reservation platform where users can browse and book tours. Implemented an admin dashboard for managing reservations and tour details.",
-    },
-    {
-      period: "2024",
-      role: "Backend Intern",
-      company: "Nichan Labs",
-      description: "Developing and optimizing backend services using Laravel and MySQL. Collaborating on API integrations and system performance improvements.",
-    },
-    {
-      period: "2023",
-      role: "Web Developer Intern",
-      company: "Errawassi",
-      description: "Worked on developing and maintaining the company's website, improving UI/UX, and enhancing performance using modern web technologies.",
-    },
-    {
-      period: "2022 - Present",
+      {
+      period: "2025 - Present",
       role: "Full-Stack Developer",
       company: "Freelance",
       description: "Designed and developed scalable web applications using Laravel, React, and MySQL. Integrated RESTful APIs and optimized performance for various projects.",
     },
+    {
+      period: "2024 - 2025",
+      role: "Full-Stack Developer",
+      company: " Everestos Kenitra",
+      description: "As a web developer at Everestos, I design and develop dynamic, user-centric web solutions. I create responsive front-end interfaces using Next.js and build robust back-end functionality with Laravel. I optimize MySQL databases for efficient data management and analyze client requirements to deliver tailored solutions. My role involves rigorous testing, debugging, and performance optimization to ensure a seamless user experience. I collaborate effectively with teams, manage project timelines, and coordinate with stakeholders. Additionally, I develop and customize websites on platforms such as WordPress, Joomla, PrestaShop, and Wix, while enhancing site visibility through SEO audits, speed optimization, and best practices.",
+    },
+    {
+      period: "2024",
+      role: "Web Developer Intern",
+      company: "indigo-solution",
+      description: "Worked on developing and maintaining the company's website, improving UI/UX, and enhancing performance using modern web technologies.",
+    },
+  
   ];
 
   return (
@@ -100,8 +90,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with a love for creating beautiful and functional web applications.
-          </p>
+           I'm a dedicated full-stack developer with a strong focus on building elegant, high-performing web applications that seamlessly blend functionality with exceptional user experience.          </p>
         </motion.div>
 
         {/* Education & Experience Grid */}

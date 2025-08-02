@@ -45,13 +45,13 @@ const Footer = () => {
           {/* Logo & About */}
           <div className="md:w-1/3 flex flex-col items-center">
             <div className="">
-              <img onClick={scrollToTop} src="/logo_white.svg" alt="Karim Dev Logo" className="h-32 hover:cursor-pointer hover:scale-105 duration-200 transition-all" />
+              <img onClick={scrollToTop} src="/logob.png" alt="hamza Dev Logo" className="h-32 hover:cursor-pointer hover:scale-105 duration-200 transition-all" />
             </div>
 
             
             <div className="flex space-x-5">
               <motion.a 
-                href="https://github.com/Jhonwal" 
+                href="https://github.com/HAMZAamejoudj" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, color: '#4FD1C5' }}
@@ -60,7 +60,7 @@ const Footer = () => {
                 <FiGithub size={20} />
               </motion.a>
               <motion.a 
-                href="https://www.linkedin.com/in/karim-ouiaboub-136178283/" 
+                href="https://www.linkedin.com/in/hamza-amejoudj-22714b273/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, color: '#4FD1C5' }}
@@ -69,7 +69,7 @@ const Footer = () => {
                 <FiLinkedin size={20} />
               </motion.a>
               <motion.a 
-                href="https://www.instagram.com/wag.uer/" 
+                href="https://www.instagram.com/ha_mza202_/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, color: '#4FD1C5' }}
@@ -115,14 +115,14 @@ const Footer = () => {
                 whileHover={{ x: 3 }}
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-sm"
               >
-                <FiMail className="text-cyan-400" /> karimouiaboubob@gmail.com
+                <FiMail className="text-cyan-400" />hamzaamgouj054@gmail.com
               </motion.a>
               <motion.a 
-                href="tel:+212613821525"
+                href="tel:+212602030438"
                 whileHover={{ x: 3 }}
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-sm"
               >
-                <FiPhone className="text-cyan-400" /> +212 613-821525
+                <FiPhone className="text-cyan-400" /> +212 602-030438
               </motion.a>
               <p className="text-gray-400 mt-4 text-sm">
                 Based in Morocco • Available Worldwide
@@ -134,7 +134,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-blue-700/30">
           <p className="text-gray-400 text-center  text-sm">
-            © {currentYear} Karim OUIABOUB. All rights reserved.
+            © {currentYear} HAMZA AMEJOUD. All rights reserved.
           </p>
         </div>
       </div>

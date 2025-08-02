@@ -9,7 +9,7 @@ const initialTestimonials = [
     name: "Sarah Johnson",
     role: "CEO at TechCorp",
     image: "/images/sarah.jpg",
-    content: "Working with Karim was an exceptional experience. His attention to detail and innovative solutions transformed our project.",
+    content: "Working with Hamza was an exceptional experience. His attention to detail and innovative solutions transformed our project.",
     rating: 5,
   },
   {
@@ -17,7 +17,7 @@ const initialTestimonials = [
     name: "John Doe",
     role: "CTO at TechCorp",
     image: "/images/john.jpg",
-    content: "Karim's expertise in UI/UX design was invaluable. His ability to understand our vision and bring it to life was impressive.",
+    content: "Hamza's expertise in UI/UX design was invaluable. His ability to understand our vision and bring it to life was impressive.",
     rating: 5,
   },
 ];

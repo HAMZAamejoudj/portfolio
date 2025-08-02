@@ -71,7 +71,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="z-10"
             >
-              <img src='logo.svg' alt="Logo" className='w-20'/>
+              <img src='logob.png' alt="Logo" className='w-20'/>
             </motion.div>
 
             <ul className="flex space-x-6">

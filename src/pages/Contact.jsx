@@ -19,10 +19,10 @@ const DevSkills = () => {
 
 const ContactLinks = () => {
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/Jhonwal', label: 'GitHub', color: 'from-gray-600 to-gray-800' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/karim-ouiaboub-136178283/', label: 'LinkedIn', color: 'from-blue-600 to-blue-800' },
-    { icon: FiTwitter, href: 'https://twitter.com/karim', label: 'Twitter', color: 'from-blue-400 to-blue-600' },
-    { icon: FiInstagram, href: 'https://instagram.com/wag.uer', label: 'Instagram', color: 'from-pink-500 to-purple-600' }
+    { icon: FiGithub, href: 'https://github.com/HAMZAamejoudj', label: 'GitHub', color: 'from-gray-600 to-gray-800' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/hamza-amejoudj-22714b273/', label: 'LinkedIn', color: 'from-blue-600 to-blue-800' },
+    { icon: FiTwitter, href: '#', label: 'Twitter', color: 'from-blue-400 to-blue-600' },
+    { icon: FiInstagram, href: 'https://www.instagram.com/ha_mza202_/', label: 'Instagram', color: 'from-pink-500 to-purple-600' }
   ];
 
   return (
@@ -37,8 +37,8 @@ const ContactLinks = () => {
             <div className="p-3 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg">
               <FiMail className="text-white text-xl" />
             </div>
-            <a href="mailto:contact@karim.dev" className="hover:text-blue-400 transition-colors">
-              karimouiaboubob@gmail.com
+            <a href="mailto:hamzaamgouj054@gmail.com" className="hover:text-blue-400 transition-colors">
+              hamzaamgouj054@gmail.com
             </a>
           </motion.div>
           <motion.div
@@ -48,8 +48,8 @@ const ContactLinks = () => {
             <div className="p-3 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg">
               <FiPhone className="text-white text-xl" />
             </div>
-            <a href="tel:+212600000000" className="hover:text-blue-400 transition-colors">
-              +212 613-821525
+            <a href="tel:+212602030438" className="hover:text-blue-400 transition-colors">
+              +212 602-030438
             </a>
           </motion.div>
         </div>
