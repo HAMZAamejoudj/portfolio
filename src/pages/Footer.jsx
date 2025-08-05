@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Logo & About */}
           <div className="md:w-1/3 flex flex-col items-center">
             <div className="">
-              <img onClick={scrollToTop} src="/logob.png" alt="hamza Dev Logo" className="h-32 hover:cursor-pointer hover:scale-105 duration-200 transition-all" />
+              <img onClick={scrollToTop} src="/logo.png" alt="hamza Dev Logo" className="h-32 hover:cursor-pointer hover:scale-105 duration-200 transition-all" />
             </div>
 
             

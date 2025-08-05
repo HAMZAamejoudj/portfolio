@@ -47,7 +47,7 @@ const About = () => {
       description: "Specialized in web development, and UI/UX design.",
     },
     {
-      period: "2020 - 2022",
+      period: "2021 - 2022",
       degree: "Baccalaureate in IT Maintenance and Networks",
       institution: "Hassan II High School, Midelt",
       description: "Focused on computer maintenance, networking, and troubleshooting.",
@@ -64,7 +64,7 @@ const About = () => {
     {
       period: "2024 - 2025",
       role: "Full-Stack Developer",
-      company: " Everestos Kenitra",
+      company: " Everestos Kénitra",
       description: "As a web developer at Everestos, I design and develop dynamic, user-centric web solutions. I create responsive front-end interfaces using Next.js and build robust back-end functionality with Laravel. I optimize MySQL databases for efficient data management and analyze client requirements to deliver tailored solutions. My role involves rigorous testing, debugging, and performance optimization to ensure a seamless user experience. I collaborate effectively with teams, manage project timelines, and coordinate with stakeholders. Additionally, I develop and customize websites on platforms such as WordPress, Joomla, PrestaShop, and Wix, while enhancing site visibility through SEO audits, speed optimization, and best practices.",
     },
     {

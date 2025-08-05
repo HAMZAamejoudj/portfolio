@@ -7,6 +7,8 @@ import { SiEclipseide } from "react-icons/si";
 import { SiPrestashop } from "react-icons/si";
 import { SiJoomla } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaGitAlt } from "react-icons/fa";
 import { 
   SiReact, SiVuedotjs, SiTailwindcss,
   SiBootstrap, SiHtml5, SiCss3, SiJavascript,
@@ -48,8 +50,8 @@ const skills = [
     bgColor: 'rgba(145, 83, 83, 0.1)',
     borderColor: 'rgba(160, 100, 99, 0.4)',
     technologies: [
-      { name: 'Node.js', icon: SiNodedotjs, level: 70 },
       { name: 'Laravel', icon: SiLaravel, level: 95 },
+      { name: 'Node.js', icon: SiNodedotjs, level: 70 },
       { name: 'Django', icon: SiDjango, level: 45 },
       { name: 'Python', icon: SiPython, level: 75 },
       { name: 'PHP', icon: SiPhp, level: 85 },
@@ -113,6 +115,8 @@ const skills = [
       { name: 'VisualStudioCode', icon: BiLogoVisualStudio, level: 50 },
       { name: 'IntelliJ IDEA', icon: SiIntellijidea, level: 50 },
       { name: 'Eclipse', icon: SiEclipseide, level: 60 },
+      {name: 'Github', icon: FaSquareGithub , level:90},
+      {name:'Git', icon: FaGitAlt , level:85},
       { name: 'XAAMP', level: 80 },
 
 

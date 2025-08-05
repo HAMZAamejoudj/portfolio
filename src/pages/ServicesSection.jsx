@@ -10,6 +10,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Separator } from '@/components/ui/separator';
 import { IoShareSocialSharp } from "react-icons/io5";
 import { TbSeo } from "react-icons/tb";
+import { SiGooglemaps } from "react-icons/si";
+
 
 
 
@@ -79,7 +81,7 @@ const servicesData = [
     id: 'SEO',
     title: 'SEO',
     icon: TbSeo,
-    color: 'from-blue-600 to-blue-800',
+    color:  'from-purple-600 to-purple-800',
     shortDesc: 'Search Engine Optimization',
     fullDesc: 'Search Engine Optimization (SEO) is a digital marketing service focused on improving a website’s visibility on search engine results pages (SERPs) like Google, Bing, and Yahoo. The goal is to increase organic (non-paid) traffic by optimizing various elements of a website and its content to rank higher for relevant search queries.',
     technologies: ['Google Analytics', 'Google Search Console', 'SEMrush', 'Ahrefs', 'Screaming Frog SEO Spidek'],
@@ -89,11 +91,21 @@ const servicesData = [
     id: 'Social Media',
     title: 'Social Media Management',
     icon: IoShareSocialSharp,
-    color: 'from-blue-600 to-blue-800',
+    color: 'from-red-600 to-red-800',
     shortDesc: 'Social media management',
     fullDesc: 'Social media management involves strategically planning, creating, scheduling, and posting content on platforms like Instagram, Facebook, X, LinkedIn, and TikTok to build brand awareness and engage audiences.',
     technologies: ['Instagram', 'Facebook', 'LinkedIn', 'X', 'TikTok', 'Snapchat'],
     deliverables: ['Social Media Strategy Plan', 'Content Calendar', 'Engaging Content Assets', 'Performance Analytics Report']
+  },
+{
+  id: 'Google Maps Reviews',
+    title: 'Google Maps Reviews',
+    icon: SiGooglemaps,
+    color: 'from-yellow-600 to-yellow-800',
+    shortDesc: 'Google Maps Feedback',
+    fullDesc: 'We help you improve your Google Maps ratings to boost your business credibility.',
+    technologies: ['Google Translate API', 'OAuth Authentication:', 'GraphQL'],
+    deliverables: ['Système de notation par étoiles', 'Modération automatisée des avis', 'Photos géolocalisées des utilisateurs', 'Intégration multiplateforme des avis']
   }
    
 
